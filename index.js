@@ -4,8 +4,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
 	StyleSheet,
-	View, 
-	Text, 
+	View,
+	ViewPropTypes,
+	Text,
+	TextPropTypes,
 	Image,
 	Dimensions,
 	PixelRatio,
@@ -35,9 +37,9 @@ export default class PickerAndroid extends Component{
 
 	static propTypes = {
 		//picker's style
-		pickerStyle: View.propTypes.style,
+		pickerStyle: ViewPropTypes,
 		//picker item's style
-		itemStyle: Text.propTypes.style,
+		itemStyle: TextPropTypes,
 		//picked value changed then call this function
 		onValueChange: PropTypes.func,
 		//default to be selected value
